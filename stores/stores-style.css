@@ -1,0 +1,30 @@
+section {
+    padding: 10vh 0;
+}
+
+.store-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    margin: 5vh auto;
+}
+
+.store-container table {
+    margin-top: 1rem;
+    margin-left: 3rem;
+}
+
+.store-container p {
+    margin: 0.5rem 1rem;
+    line-height: 1.3;
+}
+
+.store-container div {
+    width: 400px;
+}
+
+.instagram {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 0vh 0 10vh 0;
+}

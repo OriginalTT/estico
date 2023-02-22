@@ -1,0 +1,172 @@
+#hero {
+    background-image: url("./public/images/hero_bg.jpg");
+    background-color: #C9DFF2;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+
+}
+
+#hero h1 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #F2DC4E;
+    font-size: 10rem;
+    display: inline;
+}
+
+#hero h2 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+    font-size: 3rem;
+    margin-top: 5rem;
+    margin-bottom: -70px;
+}
+
+#desu {
+    display: inline;
+}
+
+#hero h3 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#hero-text {
+    position: relative;
+    margin: 20vh 0 0 5vw;
+    filter: drop-shadow(0 2px 25px #000000);
+}
+
+#hero-text div {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+#hero-text h2 {
+    text-indent: 5rem;
+}
+
+#hero-text h3 {
+    margin-top: -3rem;
+    line-height: 4rem;
+    text-align: left;
+}
+
+#hero-text span {
+    display: inline;
+    padding: 0.1rem 0.2rem;
+    background-color: #3365A6;
+}
+
+mark {
+    color: white;
+    -webkit-animation: 1.5s highlight 1.5s 1 normal forwards;
+    animation: 1.5s highlight 1.5s 1 normal forwards;
+    background-color: none;
+    background: linear-gradient(90deg, #3365A6 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: 100% 0;
+}
+
+@-webkit-keyframes highlight {
+    to {
+        background-position: 0 0;
+    }
+}
+
+#scroll-down {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1rem;
+    filter: drop-shadow(0 2px 25px #000000);
+}
+
+#scroll-down span {
+    color: white;
+    font-size: 4rem;
+    margin-top: -2rem;
+}
+
+#characteristic {
+    margin: 10vh 0;
+}
+
+#char-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    width: 80vw;
+    align-items: stretch;
+}
+
+#char-container div {
+    flex: 0 1 20vw;
+}
+
+#characteristic h2,
+#characteristic h3 {
+    text-align: center;
+}
+
+#characteristic h3 {
+    font-size: 1.6rem;
+}
+
+#characteristic p {
+    margin: 3vh auto;
+    width: 80%;
+}
+
+.border-line {
+    border-style: solid;
+    border-color: #517EA6;
+    border-width: 2px;
+    padding: 2rem 0.5rem;
+    height: 70%;
+    min-width: 360px;
+}
+
+#onkatsu {
+    margin: 10vh 0;
+}
+
+#onkatsu p {
+    width: 500px;
+    font-size: 1.3rem;
+    text-indent: 2rem;
+}
+
+#onkatsu-container img {
+    width: 40vw;
+}
+
+#onkatsu-container {
+    display: flex;
+    margin: 0 auto;
+    width: 70vw;
+    align-items: center;
+    justify-content: center;
+}
+
+#instagram {
+    margin: 10vh 0;
+}
+
+#instagram-container {
+    display: flex;
+    justify-content: center;
+    width: 80vw;
+    margin: 0vw auto;
+}

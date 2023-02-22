@@ -1,0 +1,36 @@
+h1 {
+    padding-top: 10vh;
+}
+
+section {
+    margin: 10vh 0;
+}
+
+.comment-container {
+    display: flex;
+    justify-content: center;
+}
+
+.comment-container h2 {
+    width: 200px;
+}
+
+.comment-container p {
+    flex: 0 1 30rem;
+}
+
+.img-container  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container img {
+    margin: 5vh 1vw;
+}
+
+.img-container span {
+    font-size: 3rem;
+    color: #3365A6;
+    margin: 0 1vw;
+}

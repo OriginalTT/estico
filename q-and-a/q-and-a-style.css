@@ -1,0 +1,22 @@
+#q-a-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.q-a {
+    width: 30vw;
+    margin: 2vh 2vw;
+}
+
+.q-a p {
+    margin-top: 1vh;
+    margin-left: 2rem;
+    text-indent: 2rem;
+}
+
+#q-a-section {
+    padding-top: 10vh;
+    margin-bottom: 10vh;
+}
+

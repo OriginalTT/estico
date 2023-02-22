@@ -1,0 +1,31 @@
+section {
+    padding-top: 10vh;
+    width: fit-content;
+    margin: 0 auto 5vh auto;
+}
+
+h3 {
+    margin-top: 1.5rem;
+}
+
+#contact-container {
+    display: flex;
+    gap: 5vw;
+}
+
+#contact-container h4 {
+    margin: 1rem 0;
+}
+
+#contact-container div h4, #contact-container div div{
+    margin-left: 3rem;
+}
+
+
+.phone-number-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+    margin-bottom: 2rem;
+}

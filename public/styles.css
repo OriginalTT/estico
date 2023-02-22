@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+h1 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: italic;
+    color: #517EA6;
+    font-size: 4rem;
+    text-align: center;
+}
+
+.title-line {
+    width: 60vw;
+    margin: 0 auto 5vh auto;
+    border-style: solid;
+    border-color: #517EA6;
+    border-width: 1px;
+}
+
+h2 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #517EA6;
+    font-size: 3rem;
+}
+
+h3 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #517EA6;
+    font-size: 2rem;
+}
+
+h4 {
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #517EA6;
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: fot-matisse-pron, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: black;
+    font-size: 1rem;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: #C9DFF2;
+    z-index: 10;
+    display: flex;
+}
+
+#head-logo {
+    margin-left: 50px;
+    margin-top: 0.7rem;
+    margin-right: 10px;
+}
+
+header ul li {
+    display: inline;
+}
+
+header ul li a, .dropdown {
+    color: #3365A6;
+    font-family: fot-matisse-pron, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    padding: 15px;
+    text-decoration: none;
+}
+
+header ul li:hover a {
+    color: white;
+}
+
+.dropdown {
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #C9DFF2;
+    border: none;
+    font-family: fot-matisse-pron, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1rem;
+    color: #3365A6;
+}
+
+.dropdown-stores {
+    display: none;
+    position: absolute;
+    background-color: #C9DFF2;
+    min-width: 100px;
+    z-index: 11;
+    top: 3.8rem;
+    left: 310px;
+}
+
+.dropdown:hover .dropdown-stores{
+    display: block;
+}
+
+.dropdown:hover a {
+    color: #517EA6;
+}
+
+.dropdown:hover a:hover {
+    color: white;
+}
+
+.dropdown:hover .dropbtn {
+    color: white;
+}
+
+footer{
+    padding: 1rem 0 3rem 0;
+    width: 100%;
+    background-color: #C9DFF2;
+}
+
+footer img {
+    position: relative;
+    top: 20px;
+    left: 30vw;
+    width: 150px;
+}
+
+footer table {
+    position: relative;
+    left: 45vw;
+}
+
+footer table tr td a{
+    margin-right: 3rem;
+    font-family: ten-mincho-text, serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #3365A6;
+    font-size: 1rem;
+}
+
+footer a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    display: block;
+    width: 25rem;
+    margin: 5vh auto 0 auto;
+    background-color: #D9D8D7;
+    border-radius: 5px;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+}
+
+.button h3 {
+    font-size: 1.5rem;
+}
+
+.button:hover {
+    background-color: #C9DFF2;
+}
