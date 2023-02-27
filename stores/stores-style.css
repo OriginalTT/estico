@@ -1,10 +1,12 @@
 section {
-    padding: 10vh 0;
+    margin-top: 0;
+    padding: 10vh 0 0 0;
 }
 
 .store-container {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 5rem;
     margin: 5vh auto;
 }
@@ -27,4 +29,31 @@ section {
     width: fit-content;
     margin: 0 auto;
     padding: 0vh 0 10vh 0;
+}
+
+.big-map {
+    display: block;
+}
+
+.sml-map {
+    display: none;
+}
+
+@media only screen and (width <= 768px) {
+    .store-container {
+        flex-direction: column-reverse;
+        gap: 1rem;
+    }
+
+    .store-container div {
+        width: fit-content;
+    }
+
+    .big-map {
+        display: none;
+    }
+
+    .sml-map {
+        display: block;
+    }
 }

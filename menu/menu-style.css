@@ -1,9 +1,9 @@
 section {
-    margin: 15vh 0;
+    max-width: none;
 }
 
 #first {
-    margin: 10vh 0 15vh 0;
+    margin: 0 auto 5vh auto;
 }
 
 .head-spacer {
@@ -29,6 +29,7 @@ section {
 
 .items-container {
     width: 90vw;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
@@ -52,4 +53,19 @@ section {
 #space-holder {
     width: 300px;
     height: 200px;
+}
+
+@media only screen and (width <= 1000px) {
+    .title-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .title-container div {
+        width: fit-content;
+    }
+
+    .title-container div p {
+        margin: 0;
+    }
 }

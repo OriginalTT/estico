@@ -2,11 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 3rem;
 }
 
 .q-a {
     width: 30vw;
-    margin: 2vh 2vw;
+    min-width: 350px;
 }
 
 .q-a p {
@@ -15,8 +16,30 @@
     text-indent: 2rem;
 }
 
-#q-a-section {
+h1 {
     padding-top: 10vh;
-    margin-bottom: 10vh;
 }
 
+#q-a-section {
+    margin-top: 0;
+}
+
+@media only screen and (width <= 768px) {
+    #q-a-container {
+        flex-direction: column;
+    }
+
+    .q-a {
+        width: fit-content;
+        min-width: fit-content;
+    }
+
+    .q-a p {
+        margin: 1rem 0 0 0;
+    }
+
+    #q-a-section {
+        padding: 1rem;
+        max-width: 500px;
+    }
+}
