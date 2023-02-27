@@ -7,6 +7,10 @@ html {
     font-size: 16px;
 }
 
+.pref {
+    display: inline-block;
+}
+
 h1 {
     font-family: ten-mincho-text, serif;
     font-weight: 400;
@@ -56,16 +60,23 @@ p {
     font-size: 1rem;
 }
 
-header {
+section {
+    max-width: 1500px;
+    margin: 5rem auto;
+}
+
+.pc-nav {
     position: fixed;
     width: 100vw;
     background-color: #C9DFF2;
     z-index: 10;
     display: flex;
+    align-items: center;
+    top: 0;
 }
 
 #head-logo {
-    margin-left: 50px;
+    margin-left: 1rem;
     margin-top: 0.7rem;
     margin-right: 10px;
 }
@@ -80,7 +91,7 @@ header ul li a, .dropdown {
     font-weight: 500;
     font-style: normal;
     font-size: 1rem;
-    padding: 15px;
+    padding: 10px;
     text-decoration: none;
 }
 
@@ -108,8 +119,8 @@ header ul li:hover a {
     background-color: #C9DFF2;
     min-width: 100px;
     z-index: 11;
-    top: 3.8rem;
-    left: 310px;
+    top: 3rem;
+    left: 17rem;
 }
 
 .dropdown:hover .dropdown-stores{
@@ -128,6 +139,59 @@ header ul li:hover a {
     color: white;
 }
 
+.mobile-nav {
+    display: none;
+}
+
+.mobile-nav div span {
+    font-size: 3rem;
+    color: #3365A6;
+}
+
+.menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 11;
+    background-color: rgba(255, 255, 255, 80%);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.menu-nav {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    max-width: 500px;
+    height: 100vh;
+    background-color: #C9DFF2;
+    top: 0;
+    left: -100vw;
+    transition: all 0.5s;
+}
+
+.menu-nav span {
+    margin: 1rem;
+}
+
+.menu-nav div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-nav ul li {
+    display: block;
+    padding: 1rem;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.menu-nav ul li a {
+    font-size: 1.2rem;
+}
+
 footer{
     padding: 1rem 0 3rem 0;
     width: 100%;
@@ -135,15 +199,14 @@ footer{
 }
 
 footer img {
-    position: relative;
-    top: 20px;
-    left: 30vw;
     width: 150px;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
 footer table {
-    position: relative;
-    left: 45vw;
+    margin: 0 auto;
 }
 
 footer table tr td a{
@@ -158,6 +221,14 @@ footer table tr td a{
 footer a:hover {
     color: white;
     text-decoration: none;
+}
+
+.big-foot {
+    display: block;
+}
+
+.sml-foot {
+    display: none;
 }
 
 .button {
@@ -177,4 +248,92 @@ footer a:hover {
 
 .button:hover {
     background-color: #C9DFF2;
+}
+
+.big-ig {
+    display: block;
+}
+
+.mid-ig {
+    display: none;
+}
+
+.sml-ig {
+    display: none;
+}
+
+@media only screen and (width <= 1300px) {
+    .mid-ig {
+        display: block;
+    }
+
+    .big-ig {
+        display: none;
+    }
+
+    .sml-ig {
+        display: none;
+    }
+
+@media only screen and (width <= 768px) {
+    .sml-ig {
+        display: block;
+    }
+
+    .big-ig {
+        display: none;
+    }
+
+    .mid-ig {
+        display: none;
+    }
+
+    .pc-nav {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+
+    .menu-btn.open {
+        left: -100vw;
+    }
+
+    .menu-nav.open {
+        left: 0px;
+    }
+    
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    .button {
+        width: 280px;
+    }
+
+    .button h3 {
+        font-size: 1.2rem !important;
+    }
+
+    footer table tr td a {
+        margin: 0rem;
+        font-size: 1rem;
+    }
+
+    .big-foot {
+        display: none;
+    }
+    
+    .sml-foot {
+        display: block;
+    }
 }

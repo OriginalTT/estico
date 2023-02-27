@@ -6,7 +6,8 @@
     background-position: center;
     background-size: cover;
     display: grid;
-
+    max-width: none;
+    margin: 0;
 }
 
 #hero h1 {
@@ -44,12 +45,12 @@
 
 #hero-text {
     position: relative;
-    margin: 20vh 0 0 5vw;
+    top: 20vh;
+    margin: 0 auto;
     filter: drop-shadow(0 2px 25px #000000);
 }
 
 #hero-text div {
-    width: fit-content;
     margin: 0 auto;
 }
 
@@ -57,10 +58,10 @@
     text-indent: 5rem;
 }
 
-#hero-text h3 {
-    margin-top: -3rem;
-    line-height: 4rem;
-    text-align: left;
+#catchphrase {
+    display: block;
+    line-height: 0.5rem;
+    margin-left: -15vw;
 }
 
 #hero-text span {
@@ -99,20 +100,17 @@ mark {
     margin-top: -2rem;
 }
 
-#characteristic {
-    margin: 10vh 0;
-}
-
 #char-container {
     display: flex;
     justify-content: space-evenly;
     margin: 0 auto;
-    width: 80vw;
     align-items: stretch;
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 #char-container div {
-    flex: 0 1 20vw;
+    width: 380px;
 }
 
 #characteristic h2,
@@ -126,7 +124,7 @@ mark {
 
 #characteristic p {
     margin: 3vh auto;
-    width: 80%;
+    width: 90%;
 }
 
 .border-line {
@@ -134,12 +132,8 @@ mark {
     border-color: #517EA6;
     border-width: 2px;
     padding: 2rem 0.5rem;
-    height: 70%;
-    min-width: 360px;
-}
-
-#onkatsu {
-    margin: 10vh 0;
+    height: 80%;
+    box-sizing: border-box;
 }
 
 #onkatsu p {
@@ -160,13 +154,70 @@ mark {
     justify-content: center;
 }
 
-#instagram {
-    margin: 10vh 0;
-}
-
 #instagram-container {
     display: flex;
     justify-content: center;
-    width: 80vw;
+    width: fit-content;
     margin: 0vw auto;
+}
+
+@media only screen and (width <= 1300px) {
+    #onkatsu-container {
+        flex-direction: column-reverse;
+    }
+
+    #onkatsu-container img {
+        width: 70vw;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (width <= 768px) {
+    #hero h1 {
+        font-size: 25vw;
+        padding-top: 100vh;
+    }
+    #hero-text div h2 {
+        display: none;
+        font-size: 5vw;
+        margin-bottom: 0.2vh;
+    }
+
+    #hero-text h3 {
+        font-size: 1.5rem;
+    }
+
+    #desu {
+        display: none;
+    }
+
+    #scroll-down h3 {
+        display: none;
+    }
+
+    #catchphrase {
+        display: none;
+    }
+
+    #char-container {
+        gap: 0;
+    }
+
+    #char-container div {
+        width: 80vw;
+        max-width: 350px;
+    }
+
+    .border-line {
+        box-sizing: border-box;
+    }
+
+    #characteristic p {
+        width: fit-content;
+    }
+
+    #onkatsu p {
+        width: fit-content;
+        font-size: 1rem;
+    }
 }

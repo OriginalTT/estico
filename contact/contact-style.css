@@ -29,3 +29,25 @@ h3 {
     margin-left: 1rem;
     margin-bottom: 2rem;
 }
+
+.big-contact {
+    display: block;
+}
+
+.sml-contact {
+    display: none;
+}
+
+@media only screen and (width <= 768px) {
+    #contact-container {
+        flex-direction: column;
+    }
+
+    .big-contact {
+        display: none;
+    }
+
+    .sml-contact {
+        display: block;
+    }
+}

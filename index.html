@@ -2,6 +2,8 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="apple-touch-icon" sizes="180x180" href="./public/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./public/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./public/favicon/favicon-16x16.png">
@@ -11,6 +13,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" type="text/css" href="./public/styles.css">
     <link rel="stylesheet" type="text/css" href="./index-style.css">
+    <script src="./public/mobile-nav.js"></script>
     <script>
         (function (d) {
             var config = {
@@ -28,30 +31,62 @@
 
 <body>
     <header>
-        <a href="./index.html" id="head-logo"><img src=".\public\images\logo.png" alt="ESTICOのロゴ"></a>
-        <nav>
-            <ul>
-                <li><a href="./menu/menu.html">メニュー</a></li>
-                <li>
-                    <div class="dropdown">
-                        <button class="dropbtn">店舗情報</button>
-                        <div class="dropdown-stores">
-                            <a href="./stores/stores-honten.html">久留米本店</a><br>
-                            <a href="./stores/stores-nishizin.html">西新店</a><br>
-                            <a href="./stores/stores-ogura.html">小倉店</a>
+        <div class="pc-nav">
+            <a href="./index.html" id="head-logo"><img src=".\public\images\logo.png" alt="ESTICOのロゴ"></a>
+            <nav>
+                <ul>
+                    <li><a href="./menu/menu.html">メニュー</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">店舗情報</button>
+                            <div class="dropdown-stores">
+                                <a href="./stores/stores-honten.html">久留米本店</a><br>
+                                <a href="./stores/stores-nishizin.html">西新店</a><br>
+                                <a href="./stores/stores-ogura.html">小倉店</a>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li><a href="./contact/contact.html">お問い合わせ</a></li>
-                <li><a href="./voice/voice.html">お客様の声</a></li>
-                <li><a href="./q-and-a/q-and-a.html">よくあるご質問</a></li>
-            </ul>
-        </nav>
+                    </li>
+                    <li><a href="./contact/contact.html">お問い合わせ</a></li>
+                    <li><a href="./voice/voice.html">お客様の声</a></li>
+                    <li><a href="./q-and-a/q-and-a.html">よくあるご質問</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="mobile-nav">
+            <div class="menu-btn" onclick="toggle()">
+                <span class="material-symbols-outlined">
+                    menu
+                </span>
+            </div>
+            <div class="menu-nav">
+                <div>
+                    <span class="material-symbols-outlined" onclick="toggle()">
+                        close
+                    </span>
+                    <a href="./index.html">
+                        <span class="material-symbols-outlined home-btn">
+                            home
+                        </span>
+                    </a>
+                </div>
+                <ul>
+                    <li><a href="./menu/menu.html">メニュー</a></li>
+                    <li><a href="./stores/stores-honten.html">久留米本店</a></li>
+                    <li><a href="./stores/stores-nishizin.html">西新店</a></li>
+                    <li><a href="./stores/stores-ogura.html">小倉店</a></li>
+                    <li><a href="./contact/contact.html">お問い合わせ</a></li>
+                    <li><a href="./voice/voice.html">お客様の声</a></li>
+                    <li><a href="./q-and-a/q-and-a.html">よくあるご質問</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <section id="hero">
         <div id="hero-text">
-            <h3><mark>納得の価格と経験豊富な技術力</mark></h3>
-            <h3><mark>極上のオールハンドでなりたい自分になれる</mark></span></h3>
+            <div id="catchphrase">
+                <h3><mark>納得の価格と経験豊富な技術力</mark></h3>
+                <h3><mark>極上のオールハンドでなりたい自分になれる</mark></span></h3>
+            </div>
             <div>
                 <h2>福岡のエステサロン</h2>
                 <h1>ESTICO</h1>
@@ -66,13 +101,13 @@
         </div>
     </section>
     <section id="characteristic">
-        <h1>ESTICOの3つの特徴</h1>
+        <h1><span class="pref">ESTICOの</span><span class="pref">3つの特徴</span></h1>
         <div class="title-line"></div>
         <div id="char-container">
             <div>
                 <h2>#1</h2>
                 <div class="border-line">
-                    <h3>熟練した最高の技術で<br>おもてなしさせていただきます</h3>
+                    <h3>熟練した最高の技術で<br>おもてなしさせて<span class="pref">いただきます</span></h3>
                     <p>&nbsp&nbsp&nbsp全スタッフ十分な経験を活かし2001年のオープンから22年。平均25年の実務経験をもち、海外のライセンスを数多く取得しております。オールハンドの技術構成、心から満足頂けるケア、自信をもってご提供させていただきます。
                     </p>
                 </div>
@@ -80,7 +115,7 @@
             <div>
                 <h2>#2</h2>
                 <div class="border-line">
-                    <h3>お一人お一人のお悩み<br>目的御予算に合わせたプラン</h3>
+                    <h3>お一人お一人のお悩み<br>目的御予算に<span class="pref">合わせたプラン</span></h3>
                     <p>&nbsp&nbsp&nbspお肌の状態にあわせ、最適なものを選べるフェイシャルケア。身体のウエイトラインを整えるボディケア。クリアな肌を目指すボディトリートメント脱毛ケアまで。「納得のいく価格」で丁寧にご提供させていただきます。
                     </p>
                 </div>
@@ -112,9 +147,15 @@
         <div class="title-line"></div>
         <div id="instagram-container">
             <!-- SnapWidget -->
-            <iframe src="https://snapwidget.com/embed/1024059" class="snapwidget-widget" allowtransparency="true"
+            <iframe src="https://snapwidget.com/embed/1024059" class="snapwidget-widget big-ig" allowtransparency="true"
                 frameborder="0" scrolling="no"
-                style="border:none; overflow:hidden;  width:1260px; height:629px"></iframe>
+                style="border:none; overflow:hidden;  width:960px; height:529px"></iframe>
+            <iframe src="https://snapwidget.com/embed/1026115" class="snapwidget-widget mid-ig" allowtransparency="true"
+                frameborder="0" scrolling="no"
+                style="border:none; overflow:hidden;  width:640px; height:529px"></iframe>
+            <iframe src="https://snapwidget.com/embed/1026114" class="snapwidget-widget sml-ig" allowtransparency="true"
+                frameborder="0" scrolling="no"
+                style="border:none; overflow:hidden;  width:320px; height:529px"></iframe>
         </div>
         <a href="./contact/contact.html" class="button">
             <h3>お問い合わせ・ご予約はこちら</h3>
@@ -126,17 +167,24 @@
             <tr>
                 <td><a href="./stores/stores-honten.html">久留米本店</a></td>
                 <td><a href="./menu/menu.html">コース・料金</a></td>
-                <td><a href="https://beauty.hotpepper.jp/CSP/kr/freewordSearch/?freeword=ESTICO&serviceAreaCd=SG&genreAlias=esthe&searchT=%E6%A4%9C%E7%B4%A2"
+                <td class="big-foot"><a
+                        href="https://beauty.hotpepper.jp/CSP/kr/freewordSearch/?freeword=ESTICO&serviceAreaCd=SG&genreAlias=esthe&searchT=%E6%A4%9C%E7%B4%A2"
                         target="_blank">ホットペッパービューティー</a></td>
             </tr>
             <tr>
                 <td><a href="./stores/stores-nishizin.html">西新店</a></td>
                 <td><a href="./voice/voice.html">お客様の声</a></td>
-                <td><a href="https://zexy.net/esthe/c_7770050167/" target="_blank">ゼクシィ</a></td>
+                <td class="big-foot"><a href="https://zexy.net/esthe/c_7770050167/" target="_blank">ゼクシィ</a></td>
             </tr>
             <tr>
                 <td><a href="./stores/stores-ogura.html">小倉店</a></td>
                 <td><a href="./q-and-a/q-and-a.html">よくあるご質問</a></td>
+            </tr>
+            <tr>
+                <td class="sml-foot"><a
+                        href="https://beauty.hotpepper.jp/CSP/kr/freewordSearch/?freeword=ESTICO&serviceAreaCd=SG&genreAlias=esthe&searchT=%E6%A4%9C%E7%B4%A2"
+                        target="_blank">ホットペッパービューティー</a></td>
+                <td class="sml-foot"><a href="https://zexy.net/esthe/c_7770050167/" target="_blank">ゼクシィ</a></td>
             </tr>
         </table>
     </footer>
